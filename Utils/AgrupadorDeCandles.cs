@@ -35,7 +35,8 @@ public static class AgrupadorDeCandles
         }
 
         // Remove o último porque não tem o próximo
-        agrupados.RemoveAt(agrupados.Count - 1);
+        if (agrupados.Count > 0)
+            agrupados.RemoveAt(agrupados.Count - 1);
 
         return agrupados;
     }
