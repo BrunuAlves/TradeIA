@@ -5,5 +5,5 @@ namespace TradeIA.Models;
 public class CandleRegressionPrediction
 {
     [ColumnName("Score")]
-public float PredictedCloseNext { get; set; }
+    public float PredictedCloseNext { get; set; }
 }

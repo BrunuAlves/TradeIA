@@ -4,7 +4,8 @@ using TradeIA.ML;
 using TradeIA.Models;
 using TradeIA.Utils;
 
-Console.WriteLine("         IA Trade v1.0.0\r\n\r\n");
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+Console.WriteLine("         IA Trade v1.0.0\n");
 
 var candles = new List<CandleData>();
 
@@ -53,21 +54,27 @@ var agrupados1h = AgrupadorDeCandles.Agrupar(candles, 60);
 
 var avaliador = new Avaliador();
 
-AnsiConsole.MarkupLine("\n[yellow]🔎 Avaliando candles de 1 minutos...[/]");
+Console.WriteLine();
+AnsiConsole.MarkupLine("[yellow]🔎 Avaliando candles de 1 minutos...[/]");
 avaliador.AvaliarModelos(agrupados1m);
 
-AnsiConsole.MarkupLine("\n[yellow]🔎 Avaliando candles de 5 minutos...[/]");
+Console.WriteLine();
+AnsiConsole.MarkupLine("[yellow]🔎 Avaliando candles de 5 minutos...[/]");
 avaliador.AvaliarModelos(agrupados5m);
 
-AnsiConsole.MarkupLine("\n[yellow]🔎 Avaliando candles de 10 minutos...[/]");
+Console.WriteLine();
+AnsiConsole.MarkupLine("[yellow]🔎 Avaliando candles de 10 minutos...[/]");
 avaliador.AvaliarModelos(agrupados10m);
 
-AnsiConsole.MarkupLine("\n[yellow]🔎 Avaliando candles de 15 minutos...[/]");
+Console.WriteLine();
+AnsiConsole.MarkupLine("[yellow]🔎 Avaliando candles de 15 minutos...[/]");
 avaliador.AvaliarModelos(agrupados15m);
 
-AnsiConsole.MarkupLine("\n[yellow]🔎 Avaliando candles de 30 minutos...[/]");
+Console.WriteLine();
+AnsiConsole.MarkupLine("[yellow]🔎 Avaliando candles de 30 minutos...[/]");
 avaliador.AvaliarModelos(agrupados30m);
 
-AnsiConsole.MarkupLine("\n[yellow]🔎 Avaliando candles de 1 hora...[/]");
+Console.WriteLine();
+AnsiConsole.MarkupLine("[yellow]🔎 Avaliando candles de 1 hora...[/]");
 avaliador.AvaliarModelos(agrupados1h);
 Console.ReadLine();
