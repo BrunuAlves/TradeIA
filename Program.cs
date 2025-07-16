@@ -10,6 +10,11 @@ var candles = new List<CandleData>();
 
 Console.Write("Arquivo Base: ");
 string? file = Console.ReadLine();
+if (string.IsNullOrWhiteSpace(file) || !File.Exists(file))
+{
+    Console.WriteLine("Arquivo não encontrado!");
+    return;
+}
 
 var linhas = File.ReadAllLines(file).Skip(1).ToArray();
 
