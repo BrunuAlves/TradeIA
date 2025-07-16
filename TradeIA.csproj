@@ -10,11 +10,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="4.0.2" />
     <PackageReference Include="Microsoft.ML.FastTree" Version="4.0.2" />
+    <PackageReference Include="mtapi.be.mt5net" Version="5.4850.0" />
     <PackageReference Include="Spectre.Console" Version="0.50.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Modelos\" />
+    <Folder Include="Trading\" />
   </ItemGroup>
 
 </Project>

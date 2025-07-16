@@ -5,5 +5,8 @@ namespace TradeIA.Models;
 public class CandleClassificacaoPrediction
 {
     [ColumnName("PredictedLabel")]
-    public string? Resultado { get; set; }
+    public string PredictedLabel { get; set; }
+    public float[] Score { get; set; }
+    public string Resultado => PredictedLabel;
+    public float Confiança => Score?.Max() ?? 0f;
 }
